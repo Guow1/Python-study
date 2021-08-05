@@ -6,6 +6,12 @@ import requests
     题目类型: js加密;
     题目: js 混淆 - 动态cookie 1;
     题目要求: 爬取数据
+    流程: 
+    1.访问页面,抓包看请求,知晓cookie中关键参数'm'决定访问是否成功;
+    2.每次cookie重置，都会访问'https://match.yuanrenxue.com/match/2',并返回一段加密混淆后的js,m参数经由此js产生；
+    3.用工具'http://tool.yuanrenxue.com/decode_obfuscator' 解这段混淆,分析m的大致流程；
+    4.改写js,让execjs能正常运行js，并产生m值。
+    坑: 无关对象不要运行，不要运行
 """
 url_api = 'https://match.yuanrenxue.com/api/match/2?page=3'
 with open('test_2.js', 'r', encoding='utf_8') as f:
