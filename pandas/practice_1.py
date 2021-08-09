@@ -3,7 +3,7 @@ from pyecharts.charts import Bar, Line, TreeMap
 from pyecharts import options as opts
 
 """
-要求: 展示销量前五的item_name(包含数量),同时展示销量前五中描述的前五(包含数量),图表表示关系
+要求: 展示销量前十的item_name(包含数量),同时展示销量前十中描述的前五(包含数量),图表表示关系
 过程: 使用矩形树图
 """
 
