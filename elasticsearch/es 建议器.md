@@ -1,6 +1,6 @@
 ### elasticsearch 建议器 completion suggester
 
-参考: [https://www.cnblogs.com/Neeo/articles/10695019.html]
+[参考]: [https://www.cnblogs.com/Neeo/articles/10695019.html]
 
 mapping创建示例 (fields增加suggest即可,详细参考资料)
 ```json
@@ -35,5 +35,4 @@ body查询示例
 {"suggest": {"suggestion": {"text": "a", "completion": {
             "field": "name.suggest", "size": 10}}}, 
   "_source": "name"}
-
 ```
